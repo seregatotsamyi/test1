@@ -1,0 +1,136 @@
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.16;
+  background-color: #C0DBD9;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 30px;
+  background-color: #7FAFF6;
+  margin-bottom: 15px;
+
+  &__btn a {
+    padding: 8px 15px;
+    display: inline-block;
+    background-color: #A5C7F9;
+    border-radius: 5px;
+  }
+}
+
+.block-1 {
+  background-color: #B3F95A;
+  grid-gap: 15px;
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: minmax(100px, 390px) 1fr minmax(100px, 160px);
+  grid-template-areas:
+    ". . small-3"
+    "big big small-5";
+
+  &__item {
+    font-size: 53px;
+    text-align: center;
+    padding: 68px 10px;
+    background-color: #8AD191;
+  }
+}
+
+.small_3 {
+  grid-area: small-3;
+}
+
+.small_5 {
+  grid-area: small-5;
+}
+
+
+.big {
+  grid-area: big;
+}
+
+.block-2 {
+  padding: 30px;
+  background-color: #88B5BF;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 100px;
+
+  &__item {
+    background-color: #0D89B0;
+    height: auto;
+    aspect-ratio: 255/199;
+  }
+}
+
+.block-3 {
+  background-color: #7FAFF6;
+  padding: 50px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.modal-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  outline: 0;
+  font-size: 53px;
+  color: #000;
+}
+
+.close {
+  position: absolute;
+  font-size: 20px;
+  padding: 8px 15px;
+  background-color: #7FAFF6;
+  border-radius: 5px;
+  color: #fff;
+  top: 15px;
+  right: 15px;
+}
+
+.modal-body {
+  padding: 169px 10px;
+}
